@@ -62,11 +62,16 @@ nav span.active {
   display: none;
   height: calc(100vh - 64px);
   grid-template-columns: 1fr 420px;
-  align-items: center;
 }
 #page-accueil.active { display: grid; }
 
-.hero-left { padding: 4rem 3rem; }
+.hero-left {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
 
 .hero-badge {
   display: inline-flex;
@@ -78,6 +83,7 @@ nav span.active {
   font-size: 0.75rem;
   color: #7b7b7b;
   margin-bottom: 2rem;
+  width: fit-content;
 }
 .hero-badge::before {
   content: '';
