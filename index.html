@@ -490,7 +490,7 @@ nav{
   <div class="hero-bg-text">PORTFOLIO</div>
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-eyebrow">Disponible pour un stage</div>
+      <div class="hero-eyebrow">Stage de 1<sup>re</sup> année effectué — CTA Logistics</div>
       
       <span class="hero-name" style="margin-top:1rem;">Adel ZAMAN</span>
       <p class="hero-dash">Étudiant BTS SIO SISR — Lycée Parc de Vilgénis, Massy</p>
@@ -537,7 +537,7 @@ nav{
           <div class="info-row"><div class="k">Lycée</div><div class="v">Parc de Vilgénis, Massy</div></div>
           <div class="info-row"><div class="k">Localisation</div><div class="v">Linas, 91310</div></div>
           <div class="info-row"><div class="k">Langues</div><div class="v">Français · Anglais</div></div>
-          <div class="info-row"><div class="k">Disponibilité</div><div class="v">Stage 2025</div></div>
+          <div class="info-row"><div class="k">Stage</div><div class="v">Juin – juillet 2026</div></div>
         </div>
       </div>
     </div>
@@ -670,35 +670,136 @@ nav{
   <div class="inner">
     <div class="page-label">04 — Réalisations</div>
     <h1 class="page-title">Mes <span>projets</span></h1>
-    <p class="page-sub">Suivi de toutes mes réalisations, mis à jour au fil de la formation.</p>
+    <p class="page-sub">Mes réalisations professionnelles, réalisées lors de mon stage de 1<sup>re</sup> année chez CTA Logistics (1<sup>er</sup> juin – 3 juillet 2026). Les références R1 à R5 correspondent à celles de mon tableau de synthèse des réalisations professionnelles.</p>
     <div class="proj-list">
+
       <div class="proj-item">
-        <div class="proj-idx">001</div>
+        <div class="proj-idx">R1</div>
+        <div class="proj-body">
+          <h3>Refonte et mise en production du site vitrine</h3>
+          <p><strong>Contexte —</strong> CTA Logistics, transporteur routier spécialisé dans les marchandises de luxe, n'avait aucune présence en ligne : ni site, ni nom de domaine. Une recherche de son nom ne renvoyait aucun résultat, ce qui pénalisait sa prospection auprès des maisons parisiennes.</p>
+          <p><strong>Objectif —</strong> Concevoir et mettre en production un site vitrine professionnel présentant l'entreprise et ses quatre domaines d'expertise.</p>
+          <p><strong>Réalisation —</strong> Structure des pages et rédaction avec la direction, identité visuelle reprenant les couleurs du logo, adaptation mobile et travail du référencement. Site généré par un moteur de site statique, hébergé sur Cloudflare Workers avec déploiement automatique à chaque modification du code.</p>
+          <p><strong>Résultat —</strong> Site en ligne, accessible en HTTPS, consultable sur mobile comme sur ordinateur.</p>
+          <div class="ptags">
+            <span class="ptag">HTML / CSS / JS</span><span class="ptag">Eleventy</span><span class="ptag">Cloudflare Workers</span><span class="ptag">Git</span><span class="ptag">Référencement</span><span class="ptag">Responsive</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <span class="badge b-done">Terminé</span>
+          <span class="proj-date">02/06 – 23/06/2026</span>
+          <a href="https://cta-logistics.fr" target="_blank" rel="noopener" class="proj-lnk">cta-logistics.fr</a>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-idx">R2</div>
+        <div class="proj-body">
+          <h3>Base de données et traitement des demandes de devis</h3>
+          <p><strong>Contexte —</strong> Le site devait permettre à un prospect de demander un devis, sans qu'aucune demande ne se perde.</p>
+          <p><strong>Objectif —</strong> Mettre en place l'enregistrement des demandes et la notification automatique de l'entreprise et du client.</p>
+          <p><strong>Réalisation —</strong> Conception du schéma de la base, création de la base de données Cloudflare D1 (hébergée en Europe), et développement du traitement serveur : validation des champs, protection anti-spam par champ piège, enregistrement, puis envoi de deux courriels via une plateforme d'emailing — une notification interne et un accusé de réception au client. Le backend a également été migré d'un hébergeur externe vers Cloudflare, réduisant le nombre de prestataires.</p>
+          <p><strong>Résultat —</strong> Chaque demande est enregistrée en base et déclenche les deux courriels ; l'ensemble a été validé par un test de bout en bout.</p>
+          <div class="ptags">
+            <span class="ptag">Cloudflare D1</span><span class="ptag">SQL</span><span class="ptag">JavaScript</span><span class="ptag">API</span><span class="ptag">Brevo</span><span class="ptag">Anti-spam</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <span class="badge b-done">Terminé</span>
+          <span class="proj-date">20/06 – 26/06/2026</span>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-idx">R3</div>
+        <div class="proj-body">
+          <h3>Nom de domaine, DNS et messagerie professionnelle <span class="ptag" style="vertical-align:middle;">Réalisation détaillée dans mon rapport</span></h3>
+          <p><strong>Contexte —</strong> Le site n'était accessible que par une adresse technique impossible à communiquer, et l'entreprise utilisait des adresses Gmail personnelles pour sa correspondance professionnelle — un vrai problème d'image face à une clientèle haut de gamme.</p>
+          <p><strong>Objectif —</strong> Mettre le site en service sur son nom de domaine, créer une véritable adresse professionnelle, et garantir que les courriels envoyés arrivent en boîte de réception et non en indésirables.</p>
+          <p><strong>Réalisation —</strong> Délégation de la gestion DNS du domaine vers l'hébergeur, rattachement du domaine au site, puis configuration complète de la messagerie : enregistrements MX pour l'acheminement du courrier, SPF, DKIM et DMARC pour l'authentification des envois, et création d'une boîte professionnelle. J'ai également désactivé une signature DNSSEC devenue incompatible avec la configuration, qui aurait pu rendre le domaine injoignable.</p>
+          <p><strong>Difficulté rencontrée —</strong> La création de la boîte professionnelle restait bloquée. Après avoir vérifié mes propres réglages et consulté la documentation, j'ai ouvert une demande auprès du support du prestataire : la gestion DNS ayant été déléguée à un tiers, leur système ne parvenait pas à valider automatiquement la propriété du domaine. L'ajout d'un enregistrement de vérification a débloqué la situation.</p>
+          <p><strong>Résultat —</strong> Site accessible sur son domaine en HTTPS, adresse professionnelle opérationnelle, et courriels authentifiés — validés par un test réel de demande de devis.</p>
+          <div class="ptags">
+            <span class="ptag">DNS</span><span class="ptag">MX</span><span class="ptag">SPF / DKIM / DMARC</span><span class="ptag">DNSSEC</span><span class="ptag">Zimbra</span><span class="ptag">Cloudflare</span><span class="ptag">OVH</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <span class="badge b-done">Terminé</span>
+          <span class="proj-date">27/06 – 03/07/2026</span>
+          <a href="https://cta-logistics.fr" target="_blank" rel="noopener" class="proj-lnk">cta-logistics.fr</a>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-idx">R4</div>
+        <div class="proj-body">
+          <h3>Transfert de propriété et sécurisation des accès</h3>
+          <p><strong>Contexte —</strong> À la fin du stage, l'entreprise devait rester pleinement propriétaire de son site et de son infrastructure, sans dépendre de moi ni conserver d'accès à mon nom.</p>
+          <p><strong>Objectif —</strong> Transférer l'intégralité du projet vers des comptes au nom de l'entreprise, puis supprimer mes propres accès.</p>
+          <p><strong>Réalisation —</strong> Recréation des comptes d'hébergement et de dépôt de code au nom de l'entreprise, transfert du code et recréation de la base de données, reconfiguration des accès d'authentification, et gestion rigoureuse des éléments secrets (jamais stockés dans le code, uniquement dans l'espace sécurisé de l'hébergeur). J'ai accompagné la remise d'une documentation à trois niveaux : une page d'accueil non technique pour la direction, un guide d'utilisation, et un dossier destiné à un futur développeur.</p>
+          <p><strong>Résultat —</strong> L'entreprise est propriétaire de l'ensemble et peut faire appel à n'importe quel prestataire ; mes accès ont été retirés selon une checklist de remise.</p>
+          <div class="ptags">
+            <span class="ptag">Gestion des habilitations</span><span class="ptag">GitHub</span><span class="ptag">Cloudflare</span><span class="ptag">Gestion des secrets</span><span class="ptag">Documentation</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <span class="badge b-done">Terminé</span>
+          <span class="proj-date">24/06 – 03/07/2026</span>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-idx">R5</div>
+        <div class="proj-body">
+          <h3>Espace d'édition autonome (CMS) et accompagnement du client</h3>
+          <p><strong>Contexte —</strong> Un site que le client ne peut pas modifier lui-même devient vite obsolète, et le rend dépendant d'un développeur pour la moindre correction.</p>
+          <p><strong>Objectif —</strong> Permettre à une personne non technicienne de modifier textes, photos et coordonnées, et de publier seule.</p>
+          <p><strong>Réalisation —</strong> Mise en place d'un système de gestion de contenu accessible depuis un navigateur, avec authentification par compte GitHub gérée côté serveur. Externalisation de tout le contenu éditable, organisation des champs en rubriques compréhensibles, et rédaction d'un guide d'utilisation illustré. Toute modification déclenche la republication automatique du site.</p>
+          <p><strong>Résultat —</strong> La direction modifie et publie son contenu en autonomie, sans intervention technique.</p>
+          <div class="ptags">
+            <span class="ptag">CMS</span><span class="ptag">OAuth GitHub</span><span class="ptag">Git</span><span class="ptag">Rédaction technique</span><span class="ptag">Accompagnement utilisateur</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <span class="badge b-done">Terminé</span>
+          <span class="proj-date">23/06 – 30/06/2026</span>
+          <a href="https://cta-logistics.fr/admin" target="_blank" rel="noopener" class="proj-lnk">Espace d'édition</a>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-idx">AP</div>
+        <div class="proj-body">
+          <h3>Filtrage réseau avec pfSense <span class="ptag" style="vertical-align:middle;">Réalisation en cours de formation</span></h3>
+          <p><strong>Contexte —</strong> Atelier de professionnalisation de deuxième semestre, en formation au lycée Parc de Vilgénis.</p>
+          <p><strong>Objectif —</strong> Mettre en place un pare-feu pfSense et définir des règles de filtrage pour contrôler les flux entre les différents réseaux d'une maquette.</p>
+          <p><strong>Réalisation —</strong> À compléter : environnement de la maquette, plan d'adressage, règles de filtrage mises en place et tests de validation réalisés.</p>
+          <div class="ptags">
+            <span class="ptag">pfSense</span><span class="ptag">Pare-feu</span><span class="ptag">Règles de filtrage</span><span class="ptag">Réseau</span><span class="ptag">Virtualisation</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <span class="badge b-done">Terminé</span>
+          <span class="proj-date">2025 – 2026</span>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-idx">+</div>
         <div class="proj-body">
           <h3>Portfolio GitHub — BTS SIO SISR</h3>
-          <p>Site portfolio personnel hébergé sur GitHub Pages. Navigation par catégories, présentation personnelle, BTS SISR, veille cybersécurité et suivi de projets. HTML, CSS et JavaScript pur, responsive.</p>
+          <p>Site portfolio personnel hébergé sur GitHub Pages, servant de support à mes épreuves. Navigation par sections, présentation personnelle, formation, veille technologique et suivi de mes réalisations. HTML, CSS et JavaScript sans framework, responsive.</p>
           <div class="ptags">
             <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span><span class="ptag">GitHub Pages</span><span class="ptag">UI Design</span>
           </div>
         </div>
         <div class="proj-meta">
-          <span class="badge b-wip">En cours</span>
-          <span class="proj-date">Mai 2025</span>
-          <a href="https://github.com/adelz91" target="_blank" class="proj-lnk">github.com/adelz91</a>
+          <span class="badge b-wip">Mis à jour en continu</span>
+          <span class="proj-date">Depuis mai 2025</span>
+          <a href="https://github.com/adelz91" target="_blank" rel="noopener" class="proj-lnk">github.com/adelz91</a>
         </div>
       </div>
-      <div class="proj-item" style="opacity:0.45;">
-        <div class="proj-idx">002</div>
-        <div class="proj-body">
-          <h3>Prochain projet</h3>
-          <p>Emplacement réservé. TP réseau, maquette d'infrastructure, configuration de serveurs, projets personnels...</p>
-          <div class="ptags"><span class="ptag">À définir</span></div>
-        </div>
-        <div class="proj-meta">
-          <span class="badge b-plan">Planifié</span>
-          <span class="proj-date">2025</span>
-        </div>
-      </div>
+
     </div>
   </div>
 </div>
@@ -720,8 +821,8 @@ nav{
       <div>
         <div class="avail-card">
           <div class="head">Disponibilité</div>
-          <div class="status">Disponible pour un stage</div>
-          <p>Actuellement à la recherche d'un stage dans le cadre de mon BTS SIO SISR. N'hésitez pas à me faire part de vos offres, je suis réactif et motivé.</p>
+          <div class="status">Stage de 1<sup>re</sup> année effectué</div>
+          <p>J'ai réalisé mon stage de première année chez CTA Logistics (juin – juillet 2026), où j'ai conçu et mis en production le site de l'entreprise, sa base de données et sa messagerie professionnelle. Je suis ouvert aux échanges autour des réseaux et de la cybersécurité, ainsi qu'aux opportunités pour ma deuxième année.</p>
           <button class="btn-dark" onclick="window.location.href='mailto:adelzaman483@gmail.com'">Envoyer un message →</button>
         </div>
       </div>
